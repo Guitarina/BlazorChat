@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorChat.Domain\BlazorChat.BLL.csproj" />
+    <ProjectReference Include="..\BlazorChat.BLL\BlazorChat.BLL.csproj" />
   </ItemGroup>
 
 </Project>
