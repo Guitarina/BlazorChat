@@ -14,9 +14,18 @@ namespace BlazorChat.DAL.Data
 		{
 
 		}
-		public DbSet<Message> Messaged { get; set; }
-		public DbSet<Conversation> Conversations { get; set; }
-		public DbSet<ApplicationUser> Users { get; set; }
+
+		//protected override void OnModelCreating(ModelBuilder modelBuilder)
+		//{
+		//	modelBuilder.Entity<ChatUser>()
+		//		.HasKey(cu => new {cu.ChatId, cu.UserId});
+		//	base.OnModelCreating(modelBuilder);
+		//}
+
+		public DbSet<Message> Messages { get; set; }
+		public DbSet<Chat> Chats { get; set; }
+		public DbSet<User> Users { get; set; }
+		//public DbSet<ChatUser> ChatUsers { get; set; }
 
 	}
 }

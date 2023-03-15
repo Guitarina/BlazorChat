@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\BlazorChat.DAL\BlazorChat.DAL.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazorChat.DAL\BlazorChat.DAL.csproj" />
+    <Folder Include="Services\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>
