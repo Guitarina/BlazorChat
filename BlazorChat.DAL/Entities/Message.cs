@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlazorChat.DAL.Entities.Enum;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace BlazorChat.DAL.Entities
 {
-	public class Message
+    public class Message
 	{
 		public int Id { get; set; }
 		[MaxLength(500)]
 		public string Body { get; set; }
 
 		public DateTime DateSend { get; set; }
+		//public MessageStatus MessageStatus { get; set; }
 		
 		//Navigation properties
 		public int SenderId { get; set; }

@@ -10,8 +10,4 @@
     <ProjectReference Include="..\BlazorChat.DAL\BlazorChat.DAL.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
 </Project>

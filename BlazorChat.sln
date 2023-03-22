@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.Api", "BlazorCha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.DAL", "BlazorChat.DAL\BlazorChat.DAL.csproj", "{D41A8D0C-649B-4BF1-8781-7F687A33D193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorChat.BLL", "BlazorChat.BLL\BlazorChat.BLL.csproj", "{0B6B7E49-1C5D-4B3F-8E13-7159A7C602D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.BLL", "BlazorChat.BLL\BlazorChat.BLL.csproj", "{0B6B7E49-1C5D-4B3F-8E13-7159A7C602D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

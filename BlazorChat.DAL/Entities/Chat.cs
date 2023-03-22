@@ -1,4 +1,4 @@
-﻿using BlazorChat.DAL.Enum;
+﻿using BlazorChat.DAL.Entities.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BlazorChat.DAL.Entities
 {
-	public class Chat
+    public class Chat
 	{
 		public int Id { get; set; }
-		public ConversationType ConversationType { get; set; } = ConversationType.Private;
+		public ChatType ChatType { get; set; } = ChatType.Private;
 		public string Name { get; set; } = string.Empty;
 
 		//All the messages that belong to this conversation

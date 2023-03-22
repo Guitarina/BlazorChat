@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorChat.DAL.Abstractions
+namespace BlazorChat.BLL.Services.Interfaces
 {
-	public interface IConversationRepository
-	{
-	}
+    public interface ITokenHandler
+    {
+        void GenerateToken();
+
+    }
 }

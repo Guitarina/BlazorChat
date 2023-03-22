@@ -9,10 +9,12 @@ namespace BlazorChat.BLL.Dtos
 {
 	public class MessageDto
 	{
-
+		public int Id { get; set; }
 		public string Body { get; set; }
 		//Every message belongs to conversation
-		public  int ChatUserId { get; set; }
-		public int ConversationId { get; set; }
+		public DateTime SendDate { get; set; }
+		public int SenderId { get; set; }
+		public int ChatId { get; set; }
+
 	}
 }

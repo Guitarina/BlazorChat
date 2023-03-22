@@ -18,6 +18,8 @@ namespace BlazorChat.DAL.Entities
 		public string? FirstName { get; set; }
 		[StringLength(30)]
 		public string? LastName { get; set; }
+		public byte[] PasswordHash { get; set; }
+		public byte[] PasswordSalt { get; set; }
 
 		//Navigation property
 		public List<Chat> Chats { get; set; }

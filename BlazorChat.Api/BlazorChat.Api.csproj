@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorChat.BLL\BlazorChat.BLL.csproj" />
+    <ProjectReference Include="..\BlazorChat.DAL\BlazorChat.DAL.csproj" />
   </ItemGroup>
 
 </Project>

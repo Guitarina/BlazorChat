@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorChat.DAL.Abstractions
+namespace BlazorChat.DAL.Entities.Enum
 {
-	public interface IMessageRepository
-	{
-	}
+    public enum ChatType
+    {
+        Private,
+        Group
+    }
 }

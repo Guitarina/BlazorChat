@@ -3,6 +3,7 @@ using BlazorChat.DAL.Data;
 using BlazorChat.DAL.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorChat.Api.Controllers
 {
@@ -18,19 +19,60 @@ namespace BlazorChat.Api.Controllers
 		[HttpGet]
 		public async Task< IActionResult> Get()
 		{
-			var result =  _dbcontext.Messages.ToList();
+			var result =  await _dbcontext.Messages
+				.Select(message => new MessageDto
+				{
+					Body= message.Body,
+					ChatId= message.ChatId,
+					Id= message.Id,
+					SendDate=message.DateSend,
+					SenderId= message.SenderId,
+				}).ToListAsync();
 			return Ok(result);
 		}
 		[HttpPost]
 		public async Task<IActionResult>CreateMessage(MessageDto message)
 		{
 
-			var chat = _dbcontext.Chats.FirstOrDefault(c => c.Id == message.ConversationId);
+			var chatFromDb = await _dbcontext.Chats.FirstOrDefaultAsync(c => c.Id==message.ChatId);
+			var user = await _dbcontext.Users.FirstOrDefaultAsync(u => u.Id==message.SenderId);
 
-			if(chat == null)
+
+			if(chatFromDb == null)
 			{
+				var chat = new Chat
+				{
+					//Id = message.ChatId,
+					Messages = new List<Message>(),
+					Users = new List<User>()
+				};
+
+
+				chat.Users.Add(user);
+				chat.Messages.Add(new Message
+				{
+					Body = message.Body,
+					ChatId = chat.Id,
+					SenderId = message.SenderId,
+					DateSend= DateTime.Now,
+				});
+				_dbcontext.Chats.Add(chat);
+				_dbcontext.SaveChanges();
 
 			}
+			else
+			{
+				_dbcontext.Messages.Add(
+					new Message
+					{
+						Body = message.Body,
+						ChatId = message.ChatId,
+						SenderId = message.SenderId,
+						DateSend = DateTime.Now,
+					});
+				_dbcontext.SaveChanges();
+			}
+			
 			return Ok();
 		}
 	}
