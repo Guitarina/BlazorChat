@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.Api", "BlazorChat.Api\BlazorChat.Api.csproj", "{FD2EE13D-B726-4484-BD34-023C88CEA9C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.Api", "src\Server\BlazorChat.Api\BlazorChat.Api.csproj", "{FD2EE13D-B726-4484-BD34-023C88CEA9C3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.DAL", "BlazorChat.DAL\BlazorChat.DAL.csproj", "{D41A8D0C-649B-4BF1-8781-7F687A33D193}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.DAL", "src\Server\BlazorChat.DAL\BlazorChat.DAL.csproj", "{D41A8D0C-649B-4BF1-8781-7F687A33D193}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.BLL", "BlazorChat.BLL\BlazorChat.BLL.csproj", "{0B6B7E49-1C5D-4B3F-8E13-7159A7C602D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorChat.BLL", "src\Server\BlazorChat.BLL\BlazorChat.BLL.csproj", "{0B6B7E49-1C5D-4B3F-8E13-7159A7C602D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{908538F4-678F-4A94-83F5-BF760A2F02D4}"
 EndProject
